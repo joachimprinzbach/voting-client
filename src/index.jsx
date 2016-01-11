@@ -14,7 +14,7 @@ import {ResultsContainer} from './components/Results';
 
 require('./style.css');
 
-const socket = io(`${location.protocol}//${location.hostname}:8090`);
+const socket = io(`voting-server.herokuapp.com:3091`);
 socket.on('state', state =>
   store.dispatch(setState(state))
 );
